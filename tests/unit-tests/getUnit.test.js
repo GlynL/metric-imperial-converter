@@ -30,29 +30,3 @@ describe("Function convertHandler.getUnit(input)", () => {
     expect(getUnit(input)).toBeNull();
   });
 });
-//   suite("Function convertHandler.getUnit(input)", function() {
-//     test("For Each Valid Unit Inputs", function(done) {
-//       var input = [
-//         "gal",
-//         "l",
-//         "mi",
-//         "km",
-//         "lbs",
-//         "kg",
-//         "GAL",
-//         "L",
-//         "MI",
-//         "KM",
-//         "LBS",
-//         "KG"
-//       ];
-//       input.forEach(function(ele) {
-//         //assert
-//       });
-//       done();
-//     });
-
-//     test("Unknown Unit Input", function(done) {
-//       //done();
-//     });
-//   });
