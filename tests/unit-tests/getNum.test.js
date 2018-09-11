@@ -29,6 +29,6 @@ describe("getNum", () => {
   });
   test("no numerical input", () => {
     const input = "dkaflda";
-    expect(convertHandler.getNum(input)).toBeNull();
+    expect(convertHandler.getNum(input)).toBe(1);
   });
 });

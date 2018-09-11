@@ -20,8 +20,9 @@ function ConvertHandler() {
     // split input on letters
     const splitInput = input.split(/[a-zA-Z]/);
     const num = splitInput[0];
+    console.log(num);
     // check that input was valid
-    if (num === "") return null;
+    if (num === "") return 1;
     const result = checkFraction(num);
     return result;
   };
@@ -52,7 +53,7 @@ function ConvertHandler() {
   };
 
   this.getReturnUnit = function(initUnit) {
-    const unit = initUnit.toLowerCase();
+    const unit = initUnit ? initUnit.toLowerCase() : null;
     switch (unit) {
       case "gal":
         return "l";
@@ -74,7 +75,6 @@ function ConvertHandler() {
   // not sure what this function does
   this.spellOutUnit = function(unit) {
     var result;
-
     return result;
   };
 
@@ -83,8 +83,7 @@ function ConvertHandler() {
     const lbsToKg = 0.453592;
     const miToKm = 1.60934;
     const input = ["gal", "l", "mi", "km", "lbs", "kg"];
-    const unit = initUnit.toLowerCase();
-    switch (unit) {
+    switch (initUnit) {
       case "gal":
         return initNum * galToL;
       case "l":
@@ -103,6 +102,9 @@ function ConvertHandler() {
   };
 
   this.getString = function(initNum, initUnit, returnNum, returnUnit) {
+    if (initNum === null && initUnit === null) return "invalid number and unit";
+    if (initNum === null) return "invalid number";
+    if (initUnit === null) return "invalid unit";
     const sentence = `${initNum}${initUnit} is ${returnNum}${returnUnit}`;
     return sentence;
   };

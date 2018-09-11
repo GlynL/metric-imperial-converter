@@ -36,6 +36,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "isomorphic-fetch": "^2.2.1",
     "jest": "^23.5.0"
   }
 }
