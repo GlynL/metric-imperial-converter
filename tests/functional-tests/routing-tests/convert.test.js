@@ -2,9 +2,9 @@ require("isomorphic-fetch");
 // suite('GET /api/convert => conversion object', function () {
 
 function fetchData(input) {
-  return window
-    .fetch(`http://localhost:8080/api/convert?input=${input}`)
-    .then(res => res);
+  return fetch(`http://localhost:8080/api/convert?input=${input}`).then(
+    res => res
+  );
 }
 describe("GET /api/convert => conversion object", () => {
   test("Convert 10L (valid input)", async () => {

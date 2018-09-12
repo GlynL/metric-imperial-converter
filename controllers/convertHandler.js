@@ -20,7 +20,6 @@ function ConvertHandler() {
     // split input on letters
     const splitInput = input.split(/[a-zA-Z]/);
     const num = splitInput[0];
-    console.log(num);
     // check that input was valid
     if (num === "") return 1;
     const result = checkFraction(num);
